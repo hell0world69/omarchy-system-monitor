@@ -23,7 +23,7 @@ Panel {
     return isFinite(v) ? Math.max(1, Math.min(10, v)) : 2
   }
   readonly property bool showRam: setting("showRam", true) !== false
-  readonly property bool showTemp: setting("showTemp", false) === true
+  readonly property bool showTemp: setting("showTemp", true) !== false
   readonly property int cpuWarn: Math.max(1, Math.min(100, Number(setting("cpuWarn", 90)) || 90))
   readonly property int tempWarn: Math.max(30, Math.min(120, Number(setting("tempWarn", 85)) || 85))
 

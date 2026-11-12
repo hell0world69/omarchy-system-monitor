@@ -21,14 +21,14 @@
     "defaults": {
       "interval": 2,
       "showRam": true,
-      "showTemp": false,
+      "showTemp": true,
       "cpuWarn": 90,
       "tempWarn": 85
     },
     "schema": [
       { "key": "interval", "type": "number", "label": "Update every (seconds)", "defaultValue": 2, "description": "How often to sample /proc. 1–10 seconds; higher is lighter on slow CPUs." },
       { "key": "showRam", "type": "boolean", "label": "Show RAM in the bar", "defaultValue": true, "description": "Adds memory usage beside CPU usage." },
-      { "key": "showTemp", "type": "boolean", "label": "Show temperature in the bar", "defaultValue": false, "description": "Adds the CPU package temperature, when a sensor exists." },
+      { "key": "showTemp", "type": "boolean", "label": "Show temperature in the bar", "defaultValue": true, "description": "Adds the CPU package temperature, when a sensor exists." },
       { "key": "cpuWarn", "type": "number", "label": "CPU warning at (%)", "defaultValue": 90, "description": "Highlights the widget when CPU usage reaches this." },
       { "key": "tempWarn", "type": "number", "label": "Temperature warning at (°C)", "defaultValue": 85, "description": "Highlights the widget when the CPU reaches this temperature." }
     ]

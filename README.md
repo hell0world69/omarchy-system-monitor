@@ -2,7 +2,7 @@
 
 ![System Monitor panel](screenshot.png)
 
-An Omarchy shell bar widget showing live CPU and RAM usage (optionally CPU temperature).
+An Omarchy shell bar widget showing live CPU usage, RAM usage and CPU temperature.
 Click it for a panel with:
 
 - a CPU usage history graph (last 60 samples)
@@ -27,7 +27,7 @@ Then add `{ "id": "hell0world.system-monitor" }` to a section of `bar.layout` in
 |-----|---------|---------|
 | `interval` | `2` | Seconds between samples (1–10) |
 | `showRam` | `true` | Show RAM % in the bar |
-| `showTemp` | `false` | Show CPU temperature in the bar |
+| `showTemp` | `true` | Show CPU temperature in the bar |
 | `cpuWarn` | `90` | CPU % that highlights the widget |
 | `tempWarn` | `85` | °C that highlights the widget |
 
