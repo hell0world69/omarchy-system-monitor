@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "hell0world.system-monitor",
+  "name": "System Monitor",
+  "version": "1.0.0",
+  "author": "hell0world",
+  "license": "MIT",
+  "description": "CPU, memory and temperature in the bar, with a history graph and top processes",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "System Monitor",
+    "description": "Live CPU and RAM usage (and optionally CPU temperature) in the bar. Click for a CPU history graph, memory/swap/temperature meters, load, uptime, the busiest processes and a button to open btop.",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "interval": 2,
+      "showRam": true,
+      "showTemp": false,
+      "cpuWarn": 90,
+      "tempWarn": 85
+    },
+    "schema": [
+      { "key": "interval", "type": "number", "label": "Update every (seconds)", "defaultValue": 2, "description": "How often to sample /proc. 1–10 seconds; higher is lighter on slow CPUs." },
+      { "key": "showRam", "type": "boolean", "label": "Show RAM in the bar", "defaultValue": true, "description": "Adds memory usage beside CPU usage." },
+      { "key": "showTemp", "type": "boolean", "label": "Show temperature in the bar", "defaultValue": false, "description": "Adds the CPU package temperature, when a sensor exists." },
+      { "key": "cpuWarn", "type": "number", "label": "CPU warning at (%)", "defaultValue": 90, "description": "Highlights the widget when CPU usage reaches this." },
+      { "key": "tempWarn", "type": "number", "label": "Temperature warning at (°C)", "defaultValue": 85, "description": "Highlights the widget when the CPU reaches this temperature." }
+    ]
+  }
+}
